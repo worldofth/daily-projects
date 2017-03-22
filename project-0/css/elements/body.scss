@@ -1,0 +1,13 @@
+body{
+	font-family: $font-family;
+	color: $text-color;
+	background-color: $body-background-color;
+	margin: 0;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-kerning: normal;
+	overflow-x: hidden;
+	font-weight: $base-font-weight;
+	font-size: unit($base-font-size, em);
+	line-height: $line-height;
+}

@@ -1,13 +1,10 @@
-{
-	"env":{
+module.exports = {
+	"env": {
 		"es6": true,
-		"browser" : true,
-		"jquery": true
+		"browser": true,
+		"node": true
 	},
-	"extends": "eslint:recommended",
-	"parserOptions": {
-		"sourceType": "module"
-	},
+    "extends": "eslint:recommended",
 	"rules": {
 		"no-console": 0,
 		"indent": [
@@ -16,7 +13,7 @@
 		],
 		"linebreak-style": [
 			2,
-			"linux"
+			"unix"
 		],
 		"quotes": [
 			2,
@@ -27,4 +24,4 @@
 			"always"
 		]
 	}
-}
+};

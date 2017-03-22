@@ -3,5 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "worldofth <worldofth@hotmail.co.uk>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "eslint": "^3.18.0",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-mustache": "^2.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "mathsass": "^0.9.5",
+    "stylelint": "^7.9.0",
+    "stylelint-config-standard": "^16.0.0"
+  }
 }
