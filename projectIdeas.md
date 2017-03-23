@@ -10,3 +10,5 @@ websites
 
 animation
 - https://dribbble.com/shots/3343897-Flight-Booking-App-Home-Transitions
+- https://dribbble.com/shots/3332537-Website-animation
+- https://dribbble.com/shots/3346926-Modeling-Agency-UI-Concept

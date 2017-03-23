@@ -1,3 +1,24 @@
 {
-
+	"tiles": [
+		{
+			"title": "Content Marketing",
+			"content": "Advanced training in executing an effective inbound marketing strategy.",
+			"button": "buy for $15"
+		},
+		{
+			"title": "Marketing Software",
+			"content": "Marketing software training and certification for HubSpot Marketing Platform users.",
+			"button": "buy for $15"
+		},
+		{
+			"title": "Sales Software",
+			"content": "HubSpot CRM and HubSpot Sales software training and certification for HubSpot Sales Platform users.",
+			"button": "buy for $15"
+		},
+		{
+			"title": "HubSpot Design",
+			"content": "Technical product training for web designers using Hubspot COS, templates and website pages.",
+			"button": "buy for $15"
+		}
+	]
 }
