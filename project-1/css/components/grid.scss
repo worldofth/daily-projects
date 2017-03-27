@@ -1,0 +1,15 @@
+.grid{
+	width: 100%;
+	height: 100vh;
+	max-width: $max-width;
+	margin-left: auto;
+	margin-right: auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: $dSpace;
+	padding: $dSpace;
+
+	@media (min-width: $md-min){
+		grid-template-columns: repeat(3, 1fr);
+	}
+}

@@ -1,0 +1,16 @@
+.tile{
+	background-color: red;
+	padding: $space * 3;
+
+	&--wide{
+		@media (min-width: $md-min){
+			grid-column: span 2;
+		}
+	}
+
+	&--tall{
+		@media (min-width: $md-min){
+			grid-row: span 2;
+		}
+	}
+}
