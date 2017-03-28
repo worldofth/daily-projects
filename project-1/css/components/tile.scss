@@ -1,6 +1,36 @@
+$cyan: #94dad5;
+$dark-cream: #f0dbd8;
+$grey: #ebe8e8;
+$pale-orange: #ffcab8;
+$tile-color: #fff;
+
 .tile{
-	background-color: red;
+	background-color: $grey;
 	padding: $space * 3;
+	color: desaturate(darken($grey, 25%), 30%);
+
+	&__title{
+		color: $tile-color;
+		font-size: 2.6rem;
+		line-height: 1.2;
+		margin-bottom: $dSpace;
+		display: block;
+	}
+
+	&__content{
+		line-height: 1.6;
+		margin-bottom: $space * 3;
+	}
+
+	&__btn{
+		background-color: #fff;
+		color: currentColor;
+		font-size: 1.2rem;
+		padding: 15px;
+		display: inline-block;
+		text-decoration: none;
+		box-shadow: 0 10px 15px fade-out(darken($grey, 50%), 0.8);
+	}
 
 	&--wide{
 		@media (min-width: $md-min){
@@ -8,9 +38,42 @@
 		}
 	}
 
+	&--wide &__content{
+		@media (min-width: $md-min){
+			max-width: 50%;
+		}
+	}
+
 	&--tall{
 		@media (min-width: $md-min){
 			grid-row: span 2;
 		}
+	}
+
+	&--cyan{
+		background-color: $cyan;
+		color: desaturate(darken($cyan, 25%), 30%);
+	}
+
+	&--cyan &__btn{
+		box-shadow: 0 10px 15px fade-out(darken($cyan, 50%), 0.8);
+	}
+
+	&--dark-cream{
+		background-color: $dark-cream;
+		color: desaturate(darken($dark-cream, 25%), 30%);
+	}
+
+	&--dark-cream &__btn{
+		box-shadow: 0 10px 15px fade-out(darken($dark-cream, 50%), 0.8);
+	}
+
+	&--pale-orange{
+		background-color: $pale-orange;
+		color: desaturate(darken($pale-orange, 25%), 55%);
+	}
+
+	&--pale-orange &__btn{
+		box-shadow: 0 10px 15px fade-out(darken($pale-orange, 50%), 0.8);
 	}
 }

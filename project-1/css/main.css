@@ -92,21 +92,59 @@ nav ol {
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  grid-template-columns: 1fr;
   grid-gap: 16px;
-  padding: 16px; }
+  overflow: auto; }
   @media (min-width: 768px) {
     .grid {
-      grid-template-columns: repeat(3, 1fr); } }
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(3, calc(33.333% - 8px));
+      grid-auto-columns: calc(33.333% - 8px);
+      grid-auto-flow: column; } }
 
 .tile {
-  background-color: red;
-  padding: 24px; }
+  background-color: #ebe8e8;
+  padding: 24px;
+  color: #aaaaaa; }
+  .tile__title {
+    color: #fff;
+    font-size: 2.6rem;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    display: block; }
+  .tile__content {
+    line-height: 1.6;
+    margin-bottom: 24px; }
+  .tile__btn {
+    background-color: #fff;
+    color: currentColor;
+    font-size: 1.2rem;
+    padding: 15px;
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: 0 10px 15px rgba(113, 99, 99, 0.2); }
   @media (min-width: 768px) {
     .tile--wide {
       grid-column: span 2; } }
   @media (min-width: 768px) {
+    .tile--wide .tile__content {
+      max-width: 50%; } }
+  @media (min-width: 768px) {
     .tile--tall {
       grid-row: span 2; } }
+  .tile--cyan {
+    background-color: #94dad5;
+    color: #618d8a; }
+  .tile--cyan .tile__btn {
+    box-shadow: 0 10px 15px rgba(29, 82, 79, 0.2); }
+  .tile--dark-cream {
+    background-color: #f0dbd8;
+    color: #b19a97; }
+  .tile--dark-cream .tile__btn {
+    box-shadow: 0 10px 15px rgba(145, 67, 56, 0.2); }
+  .tile--pale-orange {
+    background-color: #ffcab8;
+    color: #c8866f; }
+  .tile--pale-orange .tile__btn {
+    box-shadow: 0 10px 15px rgba(184, 47, 0, 0.2); }
 
 /*# sourceMappingURL=main.css.map */

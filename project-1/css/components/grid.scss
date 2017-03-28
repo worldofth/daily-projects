@@ -5,11 +5,14 @@
 	margin-left: auto;
 	margin-right: auto;
 	display: grid;
-	grid-template-columns: 1fr;
 	grid-gap: $dSpace;
-	padding: $dSpace;
+	//padding: $dSpace;
+	overflow: auto;
 
 	@media (min-width: $md-min){
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: repeat(3, calc(33.333% - #{$space}));
+		grid-auto-columns: calc(33.333% - #{$space});
+		grid-auto-flow: column;
 	}
 }
