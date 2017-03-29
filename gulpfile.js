@@ -41,6 +41,27 @@ exports['watch:sass'] = watchSass;
 // ====================
 // js - webpack
 // ====================
+var webpack = require('webpack');
+var gulpWebpack = require('gulp-webpack');
+
+function buildJS(){
+	return gulp.src(baseDir + '/js/src/index.js')
+		.pipe(gulpWebpack(require('./webpack.config.js'), webpack))
+		.pipe(gulp.dest(baseDir + '/js/dist/'));
+}
+
+function watchJS(){
+	gulp.watch(baseDir + '/js/src/**/*.js', { awaitWriteFinish: true }, gulp.series(buildJS, reload))
+	.on('change', function(path){
+		console.log('File ' + path + ' was changed');
+	})
+	.on('add', function(path){
+		console.log('File ' + path + ' was added');
+	});
+}
+
+exports['build:js'] = buildJS;
+exports['watch:js'] = watchJS;
 
 // ====================
 // html - mustache
@@ -81,8 +102,8 @@ function serv(){
 
 exports['serv'] = serv;
 
-var build = gulp.parallel(buildSass, buildHtml);
-var watch = gulp.parallel(watchSass, watchHtml);
+var build = gulp.parallel(buildSass, buildJS, buildHtml);
+var watch = gulp.parallel(watchSass, watchJS, watchHtml);
 
 exports['build'] = build;
 exports['watch'] = watch;
