@@ -1,21 +1,25 @@
-var gulp = require('gulp'),
-	sourcemaps = require('gulp-sourcemaps'),
-	rename = require('gulp-rename'),
-	browserSync = require('browser-sync').create(),
-	reload = function(done){
-		browserSync.reload();
-		if(done){
-			done();
-		}
-	},
-	dailyConfig = require('./daily-config.json'),
-	baseDir =  './' + dailyConfig.currentProject;
+import gulp from 'gulp';
+import sourcemaps from 'gulp-sourcemaps';
+import rename from 'gulp-rename';
+import browserSyncObj from 'browser-sync';
+import sass from 'gulp-sass';
+import webpack from 'webpack';
+import gulpWebpack from 'gulp-webpack';
+import musatche from 'gulp-mustache';
+import {Server as karmaServer} from 'karma';
+import {resolve as resolvePath} from 'path';
+import {parseConfig as karmaParseConfig} from 'karma/lib/config';
+
+import dailyConfig from './daily-config';
+
+const browserSync = browserSyncObj.create(),
+	reload = done => (browserSync.reload(), done && done()),
+	baseDir = dailyConfig.currentProject;
+
 
 // ====================
 // css - sass
 // ====================
-var sass = require('gulp-sass');
-
 function buildSass(){
 	return gulp.src(baseDir + '/css/main.scss')
 		.pipe(sourcemaps.init())
@@ -41,9 +45,6 @@ exports['watch:sass'] = watchSass;
 // ====================
 // js - webpack
 // ====================
-var webpack = require('webpack');
-var gulpWebpack = require('gulp-webpack');
-
 function buildJS(){
 	return gulp.src(baseDir + '/js/src/index.js')
 		.pipe(gulpWebpack(require('./webpack.config.js'), webpack))
@@ -64,10 +65,42 @@ exports['build:js'] = buildJS;
 exports['watch:js'] = watchJS;
 
 // ====================
+// js - test
+// ====================
+function runKarma(configFilePath, options, cb){
+	configFilePath = resolvePath(configFilePath);
+
+	var config = karmaParseConfig(configFilePath, {});
+
+	Object.keys(options).forEach(key => config[key] = options[key]);
+
+	karmaServer.start(config, exitCode => {
+		console.log('Karma has exited with '+ exitCode);
+		cb();
+		process.exit(exitCode);
+	});
+}
+
+function testKarmaJS(done){
+	runKarma('karma.conf.js', {
+		singleRun: true,
+		autoWatch: false
+	}, done);
+}
+
+function watchKarmaTestJS(done){
+	runKarma('karma.conf.js', {
+		singleRun: false,
+		autoWatch: true
+	}, done);
+}
+
+exports['test'] = testKarmaJS;
+exports['watch:test'] = watchKarmaTestJS;
+
+// ====================
 // html - mustache
 // ====================
-var musatche = require('gulp-mustache');
-
 function buildHtml(){
 	return gulp.src(baseDir + '/html/index.mustache')
 		.pipe(musatche(baseDir + '/html/data.json'))

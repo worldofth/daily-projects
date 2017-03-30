@@ -68,15 +68,15 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/* exports provided: add, minus, times */
-/* exports used: add, minus, times */
+/* unknown exports provided */
+/* all exports used */
 /*!**********************************!*\
-  !*** ./project-0/js/src/test.js ***!
+  !*** ./project-0/js/src/math.js ***!
   \**********************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"a\", function() { return add; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"b\", function() { return minus; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"c\", function() { return times; });\nvar add = function add(a, b) {\n  return a + b;\n};\nvar minus = function minus(a, b) {\n  return a - b;\n};\nvar times = function times(a, b) {\n  return a * b;\n};\n\n\n\n//////////////////\n// WEBPACK FOOTER\n// ./project-0/js/src/test.js\n// module id = 0\n// module chunks = 0\n\n//# sourceURL=webpack:///./project-0/js/src/test.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar add = function add(a, b) {\n  return a + b;\n};\nvar minus = function minus(a, b) {\n  return a - b;\n};\nvar times = function times(a, b) {\n  return a * b;\n};\n\nexports.add = add;\nexports.minus = minus;\nexports.times = times;\n\n//////////////////\n// WEBPACK FOOTER\n// ./project-0/js/src/math.js\n// module id = 0\n// module chunks = 0\n\n//# sourceURL=webpack:///./project-0/js/src/math.js?");
 
 /***/ }),
 /* 1 */
@@ -85,10 +85,10 @@ eval("/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, 
 /*!***********************************!*\
   !*** ./project-0/js/src/index.js ***!
   \***********************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("Object.defineProperty(__webpack_exports__, \"__esModule\", { value: true });\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__test__ = __webpack_require__(/*! ./test */ 0);\n\n\nconsole.log(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__test__[\"a\" /* add */])(2, 4), __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__test__[\"b\" /* minus */])(4, 2), __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__test__[\"c\" /* times */])(2, 5));\n\n//////////////////\n// WEBPACK FOOTER\n// ./project-0/js/src/index.js\n// module id = 1\n// module chunks = 0\n\n//# sourceURL=webpack:///./project-0/js/src/index.js?");
+eval("\n\nvar _math = __webpack_require__(/*! ./math */ 0);\n\nconsole.log((0, _math.add)(2, 4), (0, _math.minus)(4, 2), (0, _math.times)(2, 5));\n\n//////////////////\n// WEBPACK FOOTER\n// ./project-0/js/src/index.js\n// module id = 1\n// module chunks = 0\n\n//# sourceURL=webpack:///./project-0/js/src/index.js?");
 
 /***/ })
 /******/ ]);
