@@ -1,0 +1,69 @@
+$line-width: 1px;
+
+.box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	transform: translate3d(-50%, -50%, 0);
+
+	&__lines > *{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border-color: #000;
+		border-style: solid;
+		border-width: 0;
+		opacity: 0.3;
+		transition: transform 1000ms ease-in-out, opacity 1000ms ease-in-out;
+	}
+
+	.active &__lines > *{
+		opacity: 1;
+	}
+
+	&__top{
+		border-top-width: $line-width;
+		left: 50%;
+		top: 0;
+		transform: translate3d(-50%, 5%, 0);
+	}
+
+	.active &__top{
+		transform: translate3d(-50%, 49%, 0);
+	}
+
+	&__bottom{
+		border-bottom-width: $line-width;
+		left: 50%;
+		bottom: 0;
+		transform: translate3d(-50%, -5%, 0);
+	}
+
+	.active &__bottom{
+		transform: translate3d(-50%, -49%, 0);
+	}
+
+	&__left{
+		border-left-width: $line-width;
+		top: 50%;
+		left: 0;
+		transform: translate3d(5%, -50%, 0);
+	}
+
+	.active &__left{
+		transform: translate3d(49%, -50%, 0);
+	}
+
+	&__right{
+		border-right-width: $line-width;
+		top: 50%;
+		right: 0;
+		transform: translate3d(-5%, -50%, 0);
+	}
+
+	.active &__right{
+		transform: translate3d(-49%, -50%, 0);
+	}
+}
