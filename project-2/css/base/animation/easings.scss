@@ -1,0 +1,9 @@
+//====================
+// Easing
+//====================
+//user ease out
+$easeOut: 			cubic-bezier(0.3, 0.15, 0.18, 1);
+$easeOutBounce: 	cubic-bezier(0.3, 0.15, 0.18, 1.25);
+
+//fades and color changes
+$gradientCurve: 	cubic-bezier(0.46, 0.03, 0.52, 0.96);
