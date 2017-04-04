@@ -2,8 +2,8 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 100%;
-	height: 100%;
+	width: 150px;
+	height: 150px;
 	transform: translate3d(-50%, -50%, 0) scale(0.9);
 	background-color: #000;
 	border-radius: 50%;
@@ -24,13 +24,7 @@
 		height: 100%;
 		border-radius: 50%;
 		background-color: #fff;
-		opacity: 0.4;
 		transition: transform 750ms 250ms ease-in-out;
-		transform: scale(0.5) rotateX(90deg);
 		transform-origin: bottom;
-	}
-
-	.active &--inner{
-		transform: scale(1) rotateX(0deg);
 	}
 }

@@ -97,53 +97,47 @@ nav ol {
   left: 50%;
   width: 400px;
   height: 400px;
-  transform: translate3d(-50%, -50%, 0); }
+  transform: translate3d(-50%, -50%, 0) scale(1);
+  transition: transform 1000ms ease-in-out; }
+  .box.active {
+    transform: translate3d(-50%, -50%, 0) scale(0);
+    transition: transform 1000ms ease-in-out; }
   .box__lines > * {
     position: absolute;
     width: 100%;
     height: 100%;
-    border-color: #000;
+    border-color: #888;
     border-style: solid;
     border-width: 0;
-    opacity: 0.3;
-    transition: transform 1000ms ease-in-out, opacity 1000ms ease-in-out; }
-  .active .box__lines > * {
-    opacity: 1; }
+    transition: transform 750ms 750ms ease-in-out; }
   .box__top {
     border-top-width: 1px;
     left: 50%;
     top: 0;
-    transform: translate3d(-50%, 5%, 0); }
+    transform: translate3d(-50%, calc(50% - 100px), 0); }
   .active .box__top {
-    transform: translate3d(-50%, 49%, 0); }
-  .box__bottom {
-    border-bottom-width: 1px;
-    left: 50%;
-    bottom: 0;
-    transform: translate3d(-50%, -5%, 0); }
-  .active .box__bottom {
-    transform: translate3d(-50%, -49%, 0); }
+    transform: translate3d(-50%, 50%, 0); }
   .box__left {
     border-left-width: 1px;
     top: 50%;
     left: 0;
-    transform: translate3d(5%, -50%, 0); }
+    transform: translate3d(calc(50% - 100px), -50%, 0); }
   .active .box__left {
-    transform: translate3d(49%, -50%, 0); }
+    transform: translate3d(50%, -50%, 0); }
   .box__right {
     border-right-width: 1px;
     top: 50%;
     right: 0;
-    transform: translate3d(-5%, -50%, 0); }
+    transform: translate3d(calc(-50% + 100px), -50%, 0); }
   .active .box__right {
-    transform: translate3d(-49%, -50%, 0); }
+    transform: translate3d(-50%, -50%, 0); }
 
 .circle {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
-  height: 100%;
+  width: 150px;
+  height: 150px;
   transform: translate3d(-50%, -50%, 0) scale(0.9);
   background-color: #000;
   border-radius: 50%;
@@ -161,11 +155,7 @@ nav ol {
     height: 100%;
     border-radius: 50%;
     background-color: #fff;
-    opacity: 0.4;
     transition: transform 750ms 250ms ease-in-out;
-    transform: scale(0.5) rotateX(90deg);
     transform-origin: bottom; }
-  .active .circle--inner {
-    transform: scale(1) rotateX(0deg); }
 
 /*# sourceMappingURL=main.css.map */
