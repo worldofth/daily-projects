@@ -1,18 +1,26 @@
 $line-width: 1px;
 $border-color: #888;
 
+$boxTiming: 3250ms;
+$boxEasing: cubic-bezier(0, 0, 0, 1);
+
+$lineTiming: 2250ms;
+$lineDelay: 1000ms;
+$lineEasing: cubic-bezier(0.29, 0.38, 0.17, 1.01);
+
 .box{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 400px;
-	height: 400px;
-	transform: translate3d(-50%, -50%, 0) scale(1);
-	transition: transform 1000ms ease-in-out;
+	width: 100vmin;
+	height: 100vmin;
+	transform: translate3d(-50%, -50%, 0) scale(0);
 
-	&.active{
-		transform: translate3d(-50%, -50%, 0) scale(0);
-		transition: transform 1000ms ease-in-out;
+	.active &{
+		transform: translate3d(-50%, -50%, 0) scale(1);
+		transition-property: transform;
+		transition-duration: $boxTiming;
+		transition-timing-function: $boxEasing;
 	}
 
 	&__lines > *{
@@ -22,39 +30,45 @@ $border-color: #888;
 		border-color: $border-color;
 		border-style: solid;
 		border-width: 0;
-		transition: transform 750ms 750ms ease-in-out;
+	}
+
+	.active &__lines > *{
+		transition-property: transform;
+		transition-duration: $lineTiming;
+		transition-delay: $lineDelay;
+		transition-timing-function: $lineEasing;
 	}
 
 	&__top{
 		border-top-width: $line-width;
 		left: 50%;
 		top: 0;
-		transform: translate3d(-50%, calc(50% - 100px), 0);
+		transform: translate3d(-50%, 50%, 0);
 	}
 
 	.active &__top{
-		transform: translate3d(-50%, 50%, 0);
+		transform: translate3d(-50%, calc(50% - 100px), 0);
 	}
 
 	&__left{
 		border-left-width: $line-width;
 		top: 50%;
 		left: 0;
-		transform: translate3d(calc(50% - 100px), -50%, 0);
+		transform: translate3d(50%, -50%, 0);
 	}
 
 	.active &__left{
-		transform: translate3d(50%, -50%, 0);
+		transform: translate3d(calc(50% - 100px), -50%, 0);
 	}
 
 	&__right{
 		border-right-width: $line-width;
 		top: 50%;
 		right: 0;
-		transform: translate3d(calc(-50% + 100px), -50%, 0);
+		transform: translate3d(-50%, -50%, 0);
 	}
 
 	.active &__right{
-		transform: translate3d(-50%, -50%, 0);
+		transform: translate3d(calc(-50% + 100px), -50%, 0);
 	}
 }
