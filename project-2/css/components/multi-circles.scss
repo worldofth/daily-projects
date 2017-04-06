@@ -1,0 +1,34 @@
+.multi-circles{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+
+	&__item{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		background-color: #fff;
+		width: $circleDiameter;
+		height: $circleDiameter;
+		border-radius: 50%;
+		transform: translate3d(-50%, -50%, 0);
+
+		&:nth-child(1){
+			transform: translate3d(-350%, -50%, 0);
+		}
+
+		&:nth-child(2){
+			transform: translate3d(-200%, -50%, 0);
+		}
+
+		&:nth-child(3){
+			transform: translate3d(100%, -50%, 0);
+		}
+
+		&:nth-child(4){
+			transform: translate3d(250%, -50%, 0);
+		}
+	}
+}
