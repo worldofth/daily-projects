@@ -1,0 +1,21 @@
+//====================
+// timings
+//====================
+//user Out timing
+$userOut: 350ms;
+$userIn: 250ms;
+$long: 750ms;
+
+$timingScale: 1.2;
+
+$userOutP1: $userOut * pow($timingScale, 3);
+$userOutP2: $userOut * pow($timingScale, 2);
+$userOutP3: $userOut * pow($timingScale, 1);
+
+$userInP1: $userIn * pow($timingScale, 3);
+$userInP2: $userIn * pow($timingScale, 2);
+$userInP3: $userIn * pow($timingScale, 1);
+
+$longP1: $long * pow($timingScale, 3);
+$longP2: $long * pow($timingScale, 2);
+$longP3: $long * pow($timingScale, 1);
