@@ -1,3 +1,14 @@
-	<script src="js/dist/bundle.js"></script>
+	<script>
+		(function (){
+			function init(){
+				setTimeout(function (){
+					var stage = document.querySelector('.stage');
+					stage.classList.add('active');
+				}, 1000);
+			}
+
+			document.addEventListener('DOMContentLoaded', init);
+		})();
+	</script>
 </body>
 </html>

@@ -1,3 +1,8 @@
+$circleDuration: 1500ms;
+$incrementDelay: 250ms;
+$circleDelay: 2250ms;
+$circleEase: cubic-bezier(0.44, 0.18, 0.4, 1.24);
+
 .multi-circles{
 	position: absolute;
 	top: 0;
@@ -14,21 +19,51 @@
 		height: $circleDiameter;
 		border-radius: 50%;
 		transform: translate3d(-50%, -50%, 0);
+		opacity: 0;
+
+		.active &{
+			transition-property: transform, opacity;
+			transition-duration: $circleDuration;
+			transition-delay: $circleDelay;
+			transition-timing-function: $circleEase;
+			opacity: 1;
+		}
 
 		&:nth-child(1){
+			transform: translate3d(-200%, -50%, 0) scale(0.4);
+		}
+
+		.active &:nth-child(1){
 			transform: translate3d(-350%, -50%, 0);
 		}
 
 		&:nth-child(2){
+			transform: translate3d(-125%, -50%, 0) scale(0.4);
+		}
+
+		.active &:nth-child(2){
 			transform: translate3d(-200%, -50%, 0);
 		}
 
 		&:nth-child(3){
+			transform: translate3d(25%, -50%, 0) scale(0.4);
+		}
+
+		.active &:nth-child(3){
 			transform: translate3d(100%, -50%, 0);
 		}
 
 		&:nth-child(4){
+			transform: translate3d(100%, -50%, 0) scale(0.4);
+		}
+
+		.active &:nth-child(4){
 			transform: translate3d(250%, -50%, 0);
+		}
+
+		.active &:nth-child(1),
+		.active &:nth-child(4){
+			transition-delay: $circleDelay + $incrementDelay;
 		}
 	}
 }
