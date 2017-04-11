@@ -1,26 +1,40 @@
 //====================
-// Vars/Mixins
+// Main
+// Author: Tom Hopkins - tom@tom-hopkins.co.uk
 //====================
-@import "base/mixins";
-@import "base/variables";
 
+// settings
 //====================
-// Base
-//====================
-@import "base/reset";
+@import "00-settings/colours";
+@import "00-settings/scales";
+@import "00-settings/type";
+@import "00-settings/spacing";
+@import "00-settings/easings";
+@import "00-settings/timings";
 
+// tools
 //====================
-// Elements
-//====================
-@import "elements/html";
-@import "elements/body";
-@import "elements/buttons";
-@import "elements/lists";
+@import "01-tools/imports";
+@import "01-tools/common";
+@import "01-tools/family";
 
+// generic
 //====================
+@import "02-generic/font-faces";
+@import "02-generic/reset";
+
+// elements
+//====================
+@import "03-elements/html";
+@import "03-elements/body";
+@import "03-elements/buttons";
+@import "03-elements/lists";
+
+// objects
+//====================
+@import "04-objects/buttons";
 // components
 //====================
 
-//====================
-// Layout
+// tumps
 //====================

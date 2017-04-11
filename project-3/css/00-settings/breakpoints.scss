@@ -1,0 +1,25 @@
+//====================
+//	breakpoints
+//====================
+
+$bp-max-diff: 0.01em;
+
+//	Min - breakpoints
+//====================
+$xxs: 	28.125em; // 450px
+$xs: 	35em; // 560px
+$sm: 	48em; // 768px
+$md: 	64em; // 1024px
+$lg: 	75em; // 1200px
+$xl:	85.375em; // 1366px
+$xxl: 	120em; // 1920px
+$xxxl:	160em; // 2560px
+
+//	Max - breakpoints
+//====================
+$xxs-max: 	$xs - $bp-max-diff;
+$xs-max: 	$sm - $bp-max-diff;
+$sm-max: 	$md - $bp-max-diff;
+$md-max: 	$lg - $bp-max-diff;
+$lg-max: 	$xl - $bp-max-diff;
+$xl-max: 	$xxl - $bp-max-diff;

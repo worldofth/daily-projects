@@ -2,7 +2,6 @@
 	"extends": "stylelint-config-standard",
 	"rules": {
 		"indentation": "tab",
-		"block-opening-brace-space-before": "never",
-		"declaration-block-no-redundant-longhand-properties": "false"
+		"block-opening-brace-space-before": "never"
 	}
 }

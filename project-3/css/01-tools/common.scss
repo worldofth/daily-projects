@@ -1,0 +1,18 @@
+@function strip-unit($num){
+	@return $num / ($num * 0 + 1);
+}
+
+@function unit($num, $unit){
+	@return strip-unit($num) + $unit;
+}
+
+@function px2em($px, $base-font-size: 16px){
+	@if unitless($px){
+		@warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
+		@return mq-px2em($px * 1px, $base-font-size);
+	}@else if unit($px) == em{
+		@return $px;
+	}
+
+	@return ($px / $base-font-size) * 1em;
+}
