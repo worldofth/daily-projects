@@ -3,6 +3,10 @@
 // Author: Tom Hopkins - tom@tom-hopkins.co.uk
 //====================
 
+// pre setting tools
+// ===================
+@import "01-tools/imports";
+
 // settings
 //====================
 @import "00-settings/colours";
@@ -11,17 +15,20 @@
 @import "00-settings/spacing";
 @import "00-settings/easings";
 @import "00-settings/timings";
+@import "00-settings/breakpoints";
+@import "00-settings/grid";
 
 // tools
 //====================
-@import "01-tools/imports";
-@import "01-tools/common";
+@import "01-tools/functions";
+@import "01-tools/mixins";
 @import "01-tools/family";
 
 // generic
 //====================
 @import "02-generic/font-faces";
 @import "02-generic/reset";
+@import "02-generic/type";
 
 // elements
 //====================
@@ -29,12 +36,18 @@
 @import "03-elements/body";
 @import "03-elements/buttons";
 @import "03-elements/lists";
+@import "03-elements/img";
 
 // objects
 //====================
 @import "04-objects/buttons";
+
 // components
 //====================
+@import "05-components/media/grid";
+@import "05-components/media/tile";
 
 // tumps
 //====================
+@import "06-trumps/ratio";
+@import "06-trumps/home";

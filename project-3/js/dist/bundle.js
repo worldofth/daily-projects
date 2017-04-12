@@ -71,24 +71,24 @@
 /* unknown exports provided */
 /* all exports used */
 /*!**********************************!*\
-  !*** ./project-0/js/src/math.js ***!
+  !*** ./project-3/js/src/math.js ***!
   \**********************************/
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar add = function add(a, b) {\n  return a + b;\n};\nvar minus = function minus(a, b) {\n  return a - b;\n};\nvar times = function times(a, b) {\n  return a * b;\n};\n\nexports.add = add;\nexports.minus = minus;\nexports.times = times;\n\n//////////////////\n// WEBPACK FOOTER\n// ./project-0/js/src/math.js\n// module id = 0\n// module chunks = 0\n\n//# sourceURL=webpack:///./project-0/js/src/math.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar add = function add(a, b) {\n  return a + b;\n};\nvar minus = function minus(a, b) {\n  return a - b;\n};\nvar times = function times(a, b) {\n  return a * b;\n};\n\nexports.add = add;\nexports.minus = minus;\nexports.times = times;\n\n//////////////////\n// WEBPACK FOOTER\n// ./project-3/js/src/math.js\n// module id = 0\n// module chunks = 0\n\n//# sourceURL=webpack:///./project-3/js/src/math.js?");
 
 /***/ }),
 /* 1 */
 /* unknown exports provided */
 /* all exports used */
 /*!***********************************!*\
-  !*** ./project-0/js/src/index.js ***!
+  !*** ./project-3/js/src/index.js ***!
   \***********************************/
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _math = __webpack_require__(/*! ./math */ 0);\n\nconsole.log((0, _math.add)(2, 4), (0, _math.minus)(4, 2), (0, _math.times)(2, 5));\n\n//////////////////\n// WEBPACK FOOTER\n// ./project-0/js/src/index.js\n// module id = 1\n// module chunks = 0\n\n//# sourceURL=webpack:///./project-0/js/src/index.js?");
+eval("\n\nvar _math = __webpack_require__(/*! ./math */ 0);\n\nconsole.log((0, _math.add)(2, 4), (0, _math.minus)(4, 2), (0, _math.times)(2, 5));\n\n//////////////////\n// WEBPACK FOOTER\n// ./project-3/js/src/index.js\n// module id = 1\n// module chunks = 0\n\n//# sourceURL=webpack:///./project-3/js/src/index.js?");
 
 /***/ })
 /******/ ]);

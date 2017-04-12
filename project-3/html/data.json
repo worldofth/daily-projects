@@ -1,3 +1,18 @@
 {
-
+	"title": "The Politics and Drama of the Cannes Film Festival",
+	"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.",
+	"threeMediaTiles": [
+		{
+			"title": "The Politics and Drama of the Cannes Film Festival",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod."
+		},
+		{
+			"title": "The Politics and Drama of the Cannes Film Festival",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod."
+		},
+		{
+			"title": "The Politics and Drama of the Cannes Film Festival",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod."
+		}
+	]
 }

@@ -16,3 +16,11 @@
 
 	@return ($px / $base-font-size) * 1em;
 }
+
+@function ratio-no-unit($width, $height){
+	@return ($height / $width) * 100;
+}
+
+@function ratio($width, $height){
+	@return unit(ratio-no-unit($width, $height), %);
+}

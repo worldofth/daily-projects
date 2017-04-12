@@ -7,7 +7,7 @@ body{
 	-webkit-font-smoothing: antialiased;
 	font-kerning: normal;
 	overflow-x: hidden;
-	font-weight: $base-font-weight;
-	font-size: unit($base-font-size, em);
+	font-weight: $font-weight;
+	font-size: unit($font-size, em);
 	line-height: $line-height;
 }

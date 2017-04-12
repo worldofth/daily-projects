@@ -1,0 +1,15 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-weight: $header-weight;
+	line-height: $header-line-height;
+	font-family: $header-font-family;
+	margin-bottom: $type-margin-bottom;
+}
+
+p{
+	margin-bottom: $type-margin-bottom;
+}

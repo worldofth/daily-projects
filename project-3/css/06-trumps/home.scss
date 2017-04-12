@@ -1,0 +1,34 @@
+.l-home{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"featured"
+		"popular"
+		"aside";
+	width: 100%;
+	max-width: $max-width;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: $tspace * 2;
+	padding-left: $total-gutter;
+	padding-right: $total-gutter;
+
+	@media (min-width: $md){
+		grid-template-columns: 3fr 1fr;
+		grid-template-areas:
+			"featured aside"
+			"popular aside";
+	}
+
+	&__featured{
+		grid-area: featured;
+	}
+
+	&__aside{
+		grid-area: aside;
+	}
+
+	&__popular{
+		grid-area: popular;
+	}
+}

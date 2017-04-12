@@ -1,0 +1,11 @@
+.c-media-grid{
+	@media (min-width: $md){
+		display: flex;
+	}
+
+	> *{
+		margin-left: $gutter;
+		margin-right: $gutter;
+		flex: 1 1 calc(33.333% - $total-gutter);
+	}
+}

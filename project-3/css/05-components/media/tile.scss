@@ -1,0 +1,59 @@
+$xsImageRatio: ratio(15, 12);
+$smImageRatio: ratio(15, 9);
+$mdImageRatio: ratio(15, 20);
+$lgImageRatio: ratio(15, 23);
+
+.c-media-tile{
+	margin-bottom: $dspace;
+	display: flex;
+	flex-direction: column;
+
+	@media (min-width: $sm){
+		flex-direction: row;
+	}
+
+	@media (min-width: $md){
+		flex-direction: column;
+	}
+
+	&__image{
+		margin-bottom: $tspace;
+		position: relative;
+		height: 0;
+		width: 100%;
+		padding-bottom: $xsImageRatio;
+
+		@media (min-width: $sm){
+			padding-bottom: $smImageRatio;
+		}
+
+		@media (min-width: $md){
+			padding-bottom: $mdImageRatio;
+		}
+
+		@media (min-width: $lg){
+			padding-bottom: $lgImageRatio;
+		}
+
+		> *{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__title{
+		color: $grey-dark;
+		font-size: 2.2rem;
+		font-weight: 400;
+	}
+
+	&__description{
+		color: $grey-dark;
+		margin-bottom: 0;
+		font-size: 1.3rem;
+	}
+}
