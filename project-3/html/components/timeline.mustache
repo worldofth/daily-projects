@@ -1,11 +1,11 @@
-<aside class="l-home__aside c-timeline">
+<aside class="l-home__aside c-timeline h-hide--xs">
 	<div class="c-media-title c-timeline__title">
 		<h3>{{timeline.title}}</h3>
 	</div>
-	<div class="c-media-list c-timeline__list">
+	<div class="c-media-list c-media-list--sm-row c-timeline__list">
 		{{#timeline.mediaList}}
 		{{> ./media-tile/media-tile}}
 		{{/timeline.mediaList}}
 	</div>
-	<a href="#" class="c-timeline__more">{{timeline.moreLink}}</a>
+	<a href="#" class="c-timeline__more">{{{timeline.moreLink}}}</a>
 </aside>

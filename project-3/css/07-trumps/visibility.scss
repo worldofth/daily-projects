@@ -1,0 +1,25 @@
+.h-hide{
+	&--lg{
+		@media (max-width: $md-max){
+			display: none;
+		}
+	}
+
+	&--md{
+		@media (max-width: $sm-max){
+			display: none;
+		}
+	}
+
+	&--sm{
+		@media (max-width: $xs-max){
+			display: none;
+		}
+	}
+
+	&--xs{
+		@media (max-width: $xxs-max){
+			display: none;
+		}
+	}
+}

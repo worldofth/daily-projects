@@ -101,46 +101,57 @@
 		"moreLink": "More Timeline Now >",
 		"mediaList": [
 			{
-				"tileClass": "c-media-tile--image-last",
+				"tileClass": "c-media-tile--image-last c-media-tile--sm-no-image",
 				"link": "#",
 				"image": true,
 				"imageClass": "c-media-tile__image--small",
 				"title": "El Nino",
+				"titleClass": "c-media-tile__title--sm-no-wrap",
 				"content": "How EL Nino Affects Everything from Flu Pandemics to the Price of Coffee",
 				"date": "30 minutes ago"
 			},
 			{
+				"tileClass": "c-media-tile--sm-no-image",
 				"link": "#",
 				"image": false,
 				"title": "Race in America",
+				"titleClass": "c-media-tile__title--sm-no-wrap",
 				"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
 				"date": "an hour ago"
 			},
 			{
+				"tileClass": "c-media-tile--sm-no-image",
 				"link": "#",
 				"image": false,
 				"title": "Nice things Happen",
+				"titleClass": "c-media-tile__title--sm-no-wrap",
 				"content": "Duis aute irure dolor in reprehenderit in voluptate velit",
 				"date": "2 hours ago"
 			},
 			{
+				"tileClass": "c-media-tile--sm-no-image",
 				"link": "#",
 				"image": false,
 				"title": "Terror Strikes",
+				"titleClass": "c-media-tile__title--sm-no-wrap",
 				"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
 				"date": "3 hours ago"
 			},
 			{
+				"tileClass": "c-media-tile--sm-no-image",
 				"link": "#",
 				"image": false,
 				"title": "Banks Steal Money",
+				"titleClass": "c-media-tile__title--sm-no-wrap",
 				"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
 				"date": "3 hours ago"
 			},
 			{
+				"tileClass": "c-media-tile--sm-no-image",
 				"link": "#",
 				"image": false,
 				"title": "People Are Good",
+				"titleClass": "c-media-tile__title--sm-no-wrap",
 				"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
 				"date": "3 hours ago"
 			}

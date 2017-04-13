@@ -44,14 +44,18 @@
 
 // components
 //====================
+@import "05-components/popular";
+@import "05-components/timeline";
 @import "05-components/media/tile";
 @import "05-components/media/grid";
 @import "05-components/media/list";
 @import "05-components/media/title";
-@import "05-components/popular";
-@import "05-components/timeline";
 
-// tumps
+// layout
 //====================
-@import "06-trumps/ratio";
-@import "06-trumps/home";
+@import "06-layout/home";
+
+// trumps
+//====================
+@import "07-trumps/ratio";
+@import "07-trumps/visibility";

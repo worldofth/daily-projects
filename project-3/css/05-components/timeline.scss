@@ -1,6 +1,8 @@
 .c-timeline{
-	margin-left: $gutter;
-	margin-right: $gutter;
+	> *{
+		margin-left: $gutter;
+		margin-right: $gutter;
+	}
 
 	&__title{
 		margin-bottom: $dspace;

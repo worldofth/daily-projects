@@ -1,10 +1,10 @@
 .l-home{
 	display: grid;
-	grid-template-columns: 3fr 1fr;
+	grid-template-columns: 1fr;
 	grid-template-areas:
-		"featured aside"
-		"popular aside";
-	grid-column-gap: $total-gutter * 2;
+		"featured"
+		"popular"
+		"aside";
 	grid-row-gap: $tspace;
 	width: 100%;
 	max-width: $max-width;
@@ -13,6 +13,15 @@
 	margin-bottom: $tspace * 2;
 	padding-left: $total-gutter;
 	padding-right: $total-gutter;
+
+	@media (min-width: $md){
+		grid-template-columns: 3fr 1fr;
+		grid-template-areas:
+			"featured aside"
+			"popular aside";
+		grid-column-gap: $total-gutter * 2;
+		grid-row-gap: $tspace;
+	}
 
 	&__featured{
 		grid-area: featured;
