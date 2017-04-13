@@ -1,0 +1,26 @@
+.popular-news{
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-areas:
+		"title title"
+		"list media";
+	align-content: flex-start;
+
+	&__title,
+	&__list{
+		margin-left: $gutter;
+		margin-right: $gutter;
+	}
+
+	&__title{
+		grid-area: title;
+	}
+
+	&__list{
+		grid-area: list;
+	}
+
+	&__media{
+		grid-area: media;
+	}
+}

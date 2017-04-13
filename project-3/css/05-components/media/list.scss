@@ -1,0 +1,15 @@
+.c-media-list{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	> *{
+		width: 100%;
+		margin-bottom: $dspace;
+
+		&:not(:last-child){
+			border-bottom: 1px solid $grey;
+			padding-bottom: $dspace;
+		}
+	}
+}

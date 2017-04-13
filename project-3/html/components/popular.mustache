@@ -1,0 +1,15 @@
+<section class="popular-news">
+	<div class="popular-news__title c-media-title">
+		<h3>{{popular.title}}</h3>
+	</div>
+	<div class="popular-news__list c-media-list">
+		{{#popular.mediaList}}
+		{{> ./media-tile/media-tile}}
+		{{/popular.mediaList}}
+	</div>
+	<div class="c-media-grid popular-news__media">
+		{{#popular.mediaGrid}}
+		{{> ./media-tile/media-tile}}
+		{{/popular.mediaGrid}}
+	</div>
+</section>

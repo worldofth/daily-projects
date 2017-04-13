@@ -1,9 +1,14 @@
-<div class="c-media-tile">
-	<div class="c-media-tile__image">
+{{#link}}<a href="{{link}}" class="c-media-tile {{tileClass}}">{{/link}}
+{{^link}}<div class="c-media-tile {{tileClass}}">{{/link}}
+	{{#image}}
+	<div class="c-media-tile__image {{imageClass}}">
 		<img>
 	</div>
+	{{/image}}
 	<div class="c-media-tile__content">
-		<h3 class="c-media-tile__title">{{title}}</h3>
-		<p class="c-media-tile__description">{{content}}</p>
+		{{#title}}<h3 class="c-media-tile__title {{titleClass}}">{{title}}</h3>{{/title}}
+		{{#content}}<p class="c-media-tile__description {{contentClass}}">{{content}}</p>{{/content}}
+		{{#date}}<small class="c-media-tile__date">{{date}}</small>{{/date}}
 	</div>
-</div>
+{{#link}}</a>{{/link}}
+{{^link}}</div>{{/link}}

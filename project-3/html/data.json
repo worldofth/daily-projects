@@ -1,18 +1,149 @@
 {
 	"title": "The Politics and Drama of the Cannes Film Festival",
 	"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.",
-	"threeMediaTiles": [
+	"mediaGrid": [
 		{
+			"link": "#",
+			"image": true,
+			"imageClass": "c-media-tile__image--large",
 			"title": "The Politics and Drama of the Cannes Film Festival",
-			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod."
+			"titleClass": "c-media-tile__title--large",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.",
+			"contentClass": "c-media-tile__description--small",
+			"date": false
 		},
 		{
+			"link": "#",
+			"image": true,
+			"imageClass": "c-media-tile__image--large",
 			"title": "The Politics and Drama of the Cannes Film Festival",
-			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod."
+			"titleClass": "c-media-tile__title--large",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.",
+			"contentClass": "c-media-tile__description--small",
+			"date": false
 		},
 		{
+			"link": "#",
+			"image": true,
+			"imageClass": "c-media-tile__image--large",
 			"title": "The Politics and Drama of the Cannes Film Festival",
-			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod."
+			"titleClass": "c-media-tile__title--large",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.",
+			"contentClass": "c-media-tile__description--small",
+			"date": false
 		}
-	]
+	],
+	"popular": {
+		"title": "most popular today",
+		"mediaList": [
+			{
+				"link": "#",
+				"image": false,
+				"imageClass": false,
+				"title": false,
+				"content": "Lorem ipsum dolor sit amet voluptates",
+				"date": false
+			},
+			{
+				"link": "#",
+				"image": false,
+				"imageClass": false,
+				"title": false,
+				"content": "consectetur adipisicing elit nam at dolore",
+				"date": false
+			},
+			{
+				"link": "#",
+				"image": false,
+				"imageClass": false,
+				"title": false,
+				"content": "Possimus minima fuga adipisci nulla tempore vel cupiditate",
+				"date": false
+			},
+			{
+				"link": "#",
+				"image": false,
+				"imageClass": false,
+				"title": false,
+				"content": "quibusdam, facilis cumque! Fuga voluptates commodi",
+				"date": false
+			}
+		],
+		"mediaGrid": [
+			{
+				"link": "#",
+				"image": true,
+				"imageClass": "c-media-tile__image--medium",
+				"title": false,
+				"content": "Lorem ipsum dolor sit amet, elit sed.",
+				"date": false
+			},
+			{
+				"link": "#",
+				"image": true,
+				"imageClass": "c-media-tile__image--medium",
+				"title": false,
+				"content": "Lorem ipsum dolor sit amet, elit sed.",
+				"date": false
+			},
+			{
+				"link": "#",
+				"image": true,
+				"imageClass": "c-media-tile__image--medium",
+				"title": false,
+				"content": "Lorem ipsum dolor sit amet, elit sed.",
+				"date": false
+			}
+		]
+	},
+	"timeline": {
+		"title": "timeline now",
+		"moreLink": "More Timeline Now >",
+		"mediaList": [
+			{
+				"tileClass": "c-media-tile--image-last",
+				"link": "#",
+				"image": true,
+				"imageClass": "c-media-tile__image--small",
+				"title": "El Nino",
+				"content": "How EL Nino Affects Everything from Flu Pandemics to the Price of Coffee",
+				"date": "30 minutes ago"
+			},
+			{
+				"link": "#",
+				"image": false,
+				"title": "Race in America",
+				"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+				"date": "an hour ago"
+			},
+			{
+				"link": "#",
+				"image": false,
+				"title": "Nice things Happen",
+				"content": "Duis aute irure dolor in reprehenderit in voluptate velit",
+				"date": "2 hours ago"
+			},
+			{
+				"link": "#",
+				"image": false,
+				"title": "Terror Strikes",
+				"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+				"date": "3 hours ago"
+			},
+			{
+				"link": "#",
+				"image": false,
+				"title": "Banks Steal Money",
+				"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+				"date": "3 hours ago"
+			},
+			{
+				"link": "#",
+				"image": false,
+				"title": "People Are Good",
+				"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+				"date": "3 hours ago"
+			}
+		]
+	}
 }

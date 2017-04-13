@@ -1,59 +1,77 @@
-$xsImageRatio: ratio(15, 12);
-$smImageRatio: ratio(15, 9);
-$mdImageRatio: ratio(15, 20);
-$lgImageRatio: ratio(15, 23);
-
 .c-media-tile{
-	margin-bottom: $dspace;
 	display: flex;
 	flex-direction: column;
-
-	@media (min-width: $sm){
-		flex-direction: row;
-	}
-
-	@media (min-width: $md){
-		flex-direction: column;
-	}
+	text-decoration: none;
 
 	&__image{
-		margin-bottom: $tspace;
-		position: relative;
-		height: 0;
-		width: 100%;
-		padding-bottom: $xsImageRatio;
+		margin-bottom: $space;
 
-		@media (min-width: $sm){
-			padding-bottom: $smImageRatio;
-		}
-
-		@media (min-width: $md){
-			padding-bottom: $mdImageRatio;
-		}
-
-		@media (min-width: $lg){
-			padding-bottom: $lgImageRatio;
-		}
-
-		> *{
-			position: absolute;
-			top: 0;
-			left: 0;
+		&--large,
+		&--medium,
+		&--small{
+			position: relative;
+			height: 0;
 			width: 100%;
-			height: 100%;
-			object-fit: cover;
+
+			> *{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 		}
+
+		&--large{
+			padding-bottom: ratio(300, 465);
+			margin-bottom: $tspace;
+		}
+
+		&--medium{
+			padding-bottom: ratio(190, 255);
+			margin-bottom: $dspace;
+		}
+
+		&--small{
+			padding-bottom: ratio(190, 110);
+		}
+	}
+
+	&--image-last &__image{
+		order: 1;
 	}
 
 	&__title{
 		color: $grey-dark;
-		font-size: 2.2rem;
-		font-weight: 400;
+		font-size: 1.8rem;
+		text-transform: uppercase;
+
+		&--large{
+			font-size: 2.2rem;
+			font-weight: 400;
+			text-transform: none;
+		}
 	}
 
 	&__description{
 		color: $grey-dark;
 		margin-bottom: 0;
+		font-size: $font-size;
+
+		&--small{
+			font-size: 1.3rem;
+		}
+	}
+
+	&__date{
+		display: block;
 		font-size: 1.3rem;
+		line-height: $line-height;
+		color: $grey;
+	}
+
+	&--image-last &__date{
+		margin-bottom: $dspace;
 	}
 }

@@ -1,0 +1,18 @@
+.c-timeline{
+	margin-left: $gutter;
+	margin-right: $gutter;
+
+	&__title{
+		margin-bottom: $dspace;
+	}
+
+	&__more{
+		display: block;
+		border-top: 1px solid $grey;
+		padding-top: $tspace;
+		padding-bottom: $dspace;
+		color: $grey-dark;
+		font-weight: 400;
+		text-decoration: none;
+	}
+}
