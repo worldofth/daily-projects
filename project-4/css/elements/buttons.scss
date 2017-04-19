@@ -1,0 +1,15 @@
+button{
+	overflow: visible;
+	border: 0;
+	cursor: pointer;
+	background: none;
+	-webkit-font-smoothing: inherit;
+	letter-spacing: inherit;
+	font: inherit;
+
+	&:focus,
+	&:active{
+		outline: none;
+		box-shadow: none;
+	}
+}
