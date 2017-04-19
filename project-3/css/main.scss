@@ -42,18 +42,18 @@
 //====================
 @import "04-objects/buttons";
 
-// components
-//====================
-@import "05-components/popular";
-@import "05-components/timeline";
-@import "05-components/media/tile";
-@import "05-components/media/grid";
-@import "05-components/media/list";
-@import "05-components/media/title";
-
 // layout
 //====================
-@import "06-layout/home";
+@import "05-layout/home";
+
+// components
+//====================
+@import "06-components/popular";
+@import "06-components/timeline";
+@import "06-components/media/tile";
+@import "06-components/media/grid";
+@import "06-components/media/list";
+@import "06-components/media/title";
 
 // trumps
 //====================
