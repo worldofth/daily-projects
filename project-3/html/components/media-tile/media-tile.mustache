@@ -1,8 +1,10 @@
 {{#link}}<a href="{{link}}" class="c-media-tile {{tileClass}}">{{/link}}
 {{^link}}<div class="c-media-tile {{tileClass}}">{{/link}}
 	{{#image}}
-	<div class="c-media-tile__image {{imageClass}}">
-		<img>
+	<div class="c-media-tile__image-wrap">
+		<div class="c-media-tile__image {{imageClass}}">
+			<img>
+		</div>
 	</div>
 	{{/image}}
 	<div class="c-media-tile__content">

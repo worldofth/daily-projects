@@ -11,8 +11,6 @@
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: $tspace * 2;
-	padding-left: $total-gutter;
-	padding-right: $total-gutter;
 
 	@media (min-width: $md){
 		grid-template-columns: 3fr 1fr;
@@ -21,6 +19,11 @@
 			"popular aside";
 		grid-column-gap: $total-gutter * 2;
 		grid-row-gap: $tspace;
+	}
+
+	@media (min-width: $lg){
+		padding-left: $total-gutter;
+		padding-right: $total-gutter;
 	}
 
 	&__featured{

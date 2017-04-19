@@ -1,9 +1,17 @@
-.c-media-grid{
+.l-media-grid{
 	display: flex;
+	flex-direction: column;
+
+	@media (min-width: $xs){
+		flex-direction: row;
+	}
 
 	> *{
 		margin-left: $gutter;
 		margin-right: $gutter;
-		flex: 1 1 calc(33.333% - #{$total-gutter});
+
+		@media (min-width: $xs){
+			flex: 1 1 calc(33.333% - #{$total-gutter});
+		}
 	}
 }

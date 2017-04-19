@@ -1,10 +1,17 @@
 .popular-news{
 	display: grid;
-	grid-template-columns: 1fr 2fr;
+	grid-template-columns: 1fr;
 	grid-template-areas:
-		"title title"
-		"list media";
+		"title"
+		"media";
 	align-content: flex-start;
+
+	@media (min-width: $sm){
+		grid-template-columns: 1fr 2fr;
+		grid-template-areas:
+			"title title"
+			"list media";
+	}
 
 	&__title,
 	&__list{

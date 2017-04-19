@@ -1,40 +1,73 @@
 .c-media-tile{
 	display: flex;
-	flex-direction: column;
 	text-decoration: none;
+	flex-direction: column;
+	margin-bottom: $dspace;
+
+	@media (min-width: $xxs){
+		flex-direction: row;
+
+		&:nth-child(even){
+			flex-direction: row-reverse;
+		}
+	}
+
+	@media (min-width: $xs){
+		flex-direction: column;
+		margin-bottom: 0;
+
+		&:nth-child(even){
+			flex-direction: column;
+		}
+	}
 
 	&__image{
 		margin-bottom: $space;
+		padding-bottom: ratio(190, 110);
+		position: relative;
+		height: 0;
+		width: 100%;
 
-		&--large,
-		&--medium,
-		&--small{
-			position: relative;
-			height: 0;
+		> *{
+			position: absolute;
+			top: 0;
+			left: 0;
 			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 
-			> *{
-				position: absolute;
-				top: 0;
-				left: 0;
+		&-wrap{
+			@media (min-width: $xxs){
+				flex: 1 0 40%;
+				width: 40%;
+				margin-right: $dspace;
+			}
+
+			@media (min-width: $xs){
+				flex: 0 0 0;
 				width: 100%;
-				height: 100%;
-				object-fit: cover;
+				margin-right: 0;
 			}
 		}
 
 		&--large{
-			padding-bottom: ratio(300, 465);
-			margin-bottom: $tspace;
+			@media (min-width: $xs){
+				padding-bottom: ratio(190, 255);
+				margin-bottom: $dspace;
+			}
+
+			@media (min-width: $sm){
+				padding-bottom: ratio(300, 465);
+				margin-bottom: $tspace;
+			}
 		}
 
 		&--medium{
-			padding-bottom: ratio(190, 255);
-			margin-bottom: $dspace;
-		}
-
-		&--small{
-			padding-bottom: ratio(190, 110);
+			@media (min-width: $xs){
+				padding-bottom: ratio(190, 255);
+				margin-bottom: $dspace;
+			}
 		}
 	}
 
@@ -54,9 +87,11 @@
 		text-transform: uppercase;
 
 		&--large{
-			font-size: 2.2rem;
-			font-weight: 400;
-			text-transform: none;
+			@media (min-width: $sm){
+				font-size: 2.2rem;
+				font-weight: 400;
+				text-transform: none;
+			}
 		}
 
 		&--sm-no-wrap{
@@ -76,6 +111,18 @@
 
 		&--small{
 			font-size: 1.3rem;
+		}
+	}
+
+	&__content{
+		@media (min-width: $xxs){
+			flex: 1 1 60%;
+			width: 60%;
+		}
+
+		@media (min-width: $xs){
+			flex: 0 0 0;
+			width: 100%;
 		}
 	}
 
