@@ -3,3 +3,4 @@ node_modules
 *._*
 component-styleguide
 *.mp4
+*api-keys*
