@@ -2,7 +2,8 @@
 import {log} from './util';
 import {task} from 'folktale/data/task';
 import flip from 'ramda/src/flip';
-import bacon from 'bacon';
+import curry from 'ramda/src/curry';
+import Rx from 'rx';
 
 // getDom: String -> Task(error, DOM)
 var getDom = function(selector){
@@ -16,15 +17,16 @@ var getDom = function(selector){
 	});
 };
 
-var listen = flip(bacon.fromEvent);
+var listen = flip(Rx.Observable.fromEvent);
 
 // keypressStream: DOM -> EventStream DomEvent
-//var keypressStream = listen('keyup');
+var keypressStream = listen('keyup');
+var subscribe = curry(function(res, rej, strm){
+	strm.subscribe(res, rej);
+});
 
 function main(){
-	getDom('body').map(log).map(listen('click')).run();
-
-	//getDom('body').apply().map(log).run().promise().catch(log);
+	getDom('.js-input').map(keypressStream).map(subscribe(log, log)).run().future();
 	//seachAndGetVideoItems('extra credits').map(log).run().promise().catch(log);
 }
 

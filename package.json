@@ -33,9 +33,9 @@
     "webpack": "2.2.1"
   },
   "dependencies": {
-    "baconjs": "^0.7.93",
     "folktale": "^2.0.0-alpha4",
     "immutable-ext": "^1.0.8",
-    "ramda": "^0.23.0"
+    "ramda": "^0.23.0",
+    "rx": "^4.1.0"
   }
 }
