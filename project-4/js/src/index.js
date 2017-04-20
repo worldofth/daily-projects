@@ -1,24 +1,31 @@
-import {searchForVideos} from './youtube';
-import prop from 'ramda/src/prop';
-import pick from 'ramda/src/pick';
-import compose from 'ramda/src/compose';
-import map from 'ramda/src/map';
-import {log, spreadObj} from './util';
+//import {seachAndGetVideoItems} from './videoSearch';
+import {log} from './util';
+import {task} from 'folktale/data/task';
+import flip from 'ramda/src/flip';
+import bacon from 'bacon';
 
-// getVideoProps: {k:v} -> {k:v}
-var getVideoProps = pick(['videoId', 'title', 'channelTitle', 'description']);
+// getDom: String -> Task(error, DOM)
+var getDom = function(selector){
+	return task(resolver => {
+		var dom = document.querySelector(selector);
+		if(dom){
+			resolver.resolve(dom);
+		}else{
+			resolver.reject('Could not find dom');
+		}
+	});
+};
 
-// getVideoItem: {k:v} -> {k:v}
-var getVideoItem = compose(getVideoProps, spreadObj, pick(['snippet', 'id']));
+var listen = flip(bacon.fromEvent);
 
-// getVideoItems: [{k:v}] -> [{k:v}]
-var getVideoItems = compose(map(getVideoItem), prop('items'));
-
-// seachAndGetVideoItems: String -> Task(error, [{k:v}])
-var seachAndGetVideoItems = compose(map(getVideoItems), searchForVideos);
+// keypressStream: DOM -> EventStream DomEvent
+//var keypressStream = listen('keyup');
 
 function main(){
-	seachAndGetVideoItems('extra credits').fork(log, log);
+	getDom('body').map(log).map(listen('click')).run();
+
+	//getDom('body').apply().map(log).run().promise().catch(log);
+	//seachAndGetVideoItems('extra credits').map(log).run().promise().catch(log);
 }
 
 document.addEventListener('DOMContentLoaded', main);

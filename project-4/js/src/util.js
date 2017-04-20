@@ -1,4 +1,4 @@
-import Maybe from 'data.maybe';
+import Maybe from 'folktale/data/maybe';
 import values from 'ramda/src/values';
 import mergeAll from 'ramda/src/mergeAll';
 import compose from 'ramda/src/compose';

@@ -725,6 +725,10 @@ backo2@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/backo2/-/backo2-1.0.2.tgz#31ab1ac8b129363463e35b3ebb69f4dfcfba7947"
 
+baconjs@^0.7.93:
+  version "0.7.93"
+  resolved "https://registry.yarnpkg.com/baconjs/-/baconjs-0.7.93.tgz#9b056a1689e09eabb3d907a5ac30bb6b47861765"
+
 balanced-match@^0.4.0, balanced-match@^0.4.1:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-0.4.2.tgz#cb3f3e3c732dc0f01ee70b403f302e61d7709838"
@@ -1419,10 +1423,6 @@ d@1:
   dependencies:
     es5-ext "^0.10.9"
 
-daggy@0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/daggy/-/daggy-0.0.1.tgz#ae9c932c9f7136e655a04afb21e8baadfd0d3707"
-
 dargs@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/dargs/-/dargs-5.1.0.tgz#ec7ea50c78564cd36c9d5ec18f66329fade27829"
@@ -1432,14 +1432,6 @@ dashdash@^1.12.0:
   resolved "https://registry.yarnpkg.com/dashdash/-/dashdash-1.14.1.tgz#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"
   dependencies:
     assert-plus "^1.0.0"
-
-data.maybe@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/data.maybe/-/data.maybe-1.2.2.tgz#f955e4b5572b2eb5047eab93d8bb3a1cc76a2dc3"
-
-data.task@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/data.task/-/data.task-3.1.1.tgz#e985f5bedadd926b2d63c1a5d2076cff917a52ad"
 
 date-now@^0.1.4:
   version "0.1.4"
@@ -2068,12 +2060,6 @@ fancy-log@^1.1.0:
     chalk "^1.1.1"
     time-stamp "^1.0.0"
 
-fantasy-io@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/fantasy-io/-/fantasy-io-0.0.1.tgz#73218dd458fe140c313b258b151ac0eb68deadc4"
-  dependencies:
-    daggy "0.0.1"
-
 fast-levenshtein@~2.0.4:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
@@ -2190,6 +2176,10 @@ flat-cache@^1.2.1:
 flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
+
+folktale@^2.0.0-alpha4:
+  version "2.0.0-alpha4"
+  resolved "https://registry.yarnpkg.com/folktale/-/folktale-2.0.0-alpha4.tgz#a2e1d8d5d9d5e9d230a006efd463c39186121ec1"
 
 for-in@^1.0.1:
   version "1.0.2"

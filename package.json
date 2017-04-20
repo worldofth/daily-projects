@@ -33,9 +33,8 @@
     "webpack": "2.2.1"
   },
   "dependencies": {
-    "data.maybe": "^1.2.2",
-    "data.task": "^3.1.1",
-    "fantasy-io": "^0.0.1",
+    "baconjs": "^0.7.93",
+    "folktale": "^2.0.0-alpha4",
     "immutable-ext": "^1.0.8",
     "ramda": "^0.23.0"
   }

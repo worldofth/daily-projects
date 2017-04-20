@@ -1,4 +1,4 @@
-import Task from 'data.task';
+import {task as Task} from 'folktale/data/task';
 import curry from 'ramda/src/curry';
 import compose from 'ramda/src/compose';
 import {youtubeAPIKey} from './api-keys';
@@ -23,16 +23,16 @@ var queryPerPage = curry(function(perPage, searchURL){
 
 // search: String -> Task(error, Object)
 var search = function(url){
-	return new Task((rej, res) => {
+	return Task((resolver) => {
 		fetch(url)
 		.then(response => {
 			if(!response.ok){
-				rej('Fetch was rejected');
+				resolver.reject('Fetch was rejected');
 			}
 			return response.json();
 		})
-		.then(data => res(data))
-		.catch(() => rej('error occured during fetch'));
+		.then(data => resolver.resolve(data))
+		.catch(() => resolver.reject('error occured during fetch'));
 	});
 };
 
