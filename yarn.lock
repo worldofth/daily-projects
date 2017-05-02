@@ -725,6 +725,21 @@ backo2@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/backo2/-/backo2-1.0.2.tgz#31ab1ac8b129363463e35b3ebb69f4dfcfba7947"
 
+baconjs@^0.7.93:
+  version "0.7.93"
+  resolved "https://registry.yarnpkg.com/baconjs/-/baconjs-0.7.93.tgz#9b056a1689e09eabb3d907a5ac30bb6b47861765"
+
+baconjs@~0.3.0:
+  version "0.3.15"
+  resolved "https://registry.yarnpkg.com/baconjs/-/baconjs-0.3.15.tgz#d96ac70c40a6b8d109cf1be67804c2e15c149572"
+
+baconui@^0.3.14:
+  version "0.3.14"
+  resolved "https://registry.yarnpkg.com/baconui/-/baconui-0.3.14.tgz#ad89697993fb8bb8c4b4b5ed2037071e03a32960"
+  dependencies:
+    baconjs "~0.3.0"
+    jquery-browserify "~1.8.1"
+
 balanced-match@^0.4.0, balanced-match@^0.4.1:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-0.4.2.tgz#cb3f3e3c732dc0f01ee70b403f302e61d7709838"
@@ -3055,6 +3070,10 @@ jodid25519@^1.0.0:
   dependencies:
     jsbn "~0.1.0"
 
+jquery-browserify@~1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/jquery-browserify/-/jquery-browserify-1.8.1.tgz#0dea9d741a4f4115ae1980c4531b22502991a015"
+
 js-base64@^2.1.9:
   version "2.1.9"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.1.9.tgz#f0e80ae039a4bd654b5f281fc93f04a914a7fcce"
@@ -4702,7 +4721,7 @@ rx-lite@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/rx-lite/-/rx-lite-3.1.2.tgz#19ce502ca572665f3b647b10939f97fd1615f102"
 
-rx@4.1.0, rx@^4.1.0:
+rx@4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/rx/-/rx-4.1.0.tgz#a5f13ff79ef3b740fe30aa803fb09f98805d4782"
 
