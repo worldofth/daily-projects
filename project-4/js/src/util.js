@@ -1,17 +1,11 @@
-import Maybe from 'folktale/data/maybe';
 import values from 'ramda/src/values';
 import mergeAll from 'ramda/src/mergeAll';
 import compose from 'ramda/src/compose';
+import curry from 'ramda/src/curry';
 
-var log = function(x){
-	console.log(x);
-	return x;
-};
-
-var maybe = function(val){
-	return val ? Maybe.just(val) : Maybe.Nothing();
-};
-
+var log = x => (console.log(x), x);
+var map = curry((f, func) => func.map(f));
 var spreadObj = compose(mergeAll, values);
+var nonEmpty = (x) => x && x.length > 0;
 
-export {log, maybe, spreadObj};
+export {log, map, spreadObj, nonEmpty};

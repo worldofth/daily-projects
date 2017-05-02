@@ -1,4 +1,4 @@
-import {task as Task} from 'folktale/data/task';
+import {task} from 'folktale/data/task';
 import curry from 'ramda/src/curry';
 import compose from 'ramda/src/compose';
 import {youtubeAPIKey} from './api-keys';
@@ -23,7 +23,7 @@ var queryPerPage = curry(function(perPage, searchURL){
 
 // search: String -> Task(error, Object)
 var search = function(url){
-	return Task((resolver) => {
+	return new task(resolver => {
 		fetch(url)
 		.then(response => {
 			if(!response.ok){
@@ -36,8 +36,25 @@ var search = function(url){
 	});
 };
 
+// var debugSearch = function(url){
+// 	return new task(resolver => {
+// 		if(url){
+// 			resolver.resolve(url);
+// 		}else{
+// 			resolver.reject('no url');
+// 		}
+// 	});
+// };
+
+var debugSearch = url => task(
+	(resolver) => setTimeout(() => resolver.resolve(url), 1000),
+	{
+		cleanup: (timer) => clearTimeout(timer)
+	}
+);
+
 var baseSearchURL = searchURL(youtubeAPIKey);
-var searchForVideos = compose(search, queryPerPage(10), baseSearchURL('video'));
-var searchForChannel = compose(search, queryPerPage(10), baseSearchURL('channel'));
+var searchForVideos = compose(debugSearch, queryPerPage(10), baseSearchURL('video'));
+var searchForChannel = compose(debugSearch, queryPerPage(10), baseSearchURL('channel'));
 
 export {searchForVideos, searchForChannel};
