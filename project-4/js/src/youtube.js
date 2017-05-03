@@ -2,6 +2,7 @@ import {task} from 'folktale/data/task';
 import curry from 'ramda/src/curry';
 import compose from 'ramda/src/compose';
 import {youtubeAPIKey} from './api-keys';
+import {videoSearchData} from './mockdata';
 
 // searchURL: String -> String -> String -> String
 var searchURL = curry(function(apiKey, type, query){
@@ -36,25 +37,18 @@ var search = function(url){
 	});
 };
 
-// var debugSearch = function(url){
-// 	return new task(resolver => {
-// 		if(url){
-// 			resolver.resolve(url);
-// 		}else{
-// 			resolver.reject('no url');
-// 		}
-// 	});
-// };
-
-var debugSearch = url => task(
-	(resolver) => setTimeout(() => resolver.resolve(url), 1000),
-	{
-		cleanup: (timer) => clearTimeout(timer)
-	}
-);
+var mockSearch = () => {
+	var mockData = videoSearchData;
+	return task(
+		resolver => setTimeout(() => resolver.resolve(mockData), 0),
+		{
+			cleanup: timer => clearTimeout(timer)
+		}
+	);
+};
 
 var baseSearchURL = searchURL(youtubeAPIKey);
-var searchForVideos = compose(debugSearch, queryPerPage(10), baseSearchURL('video'));
-var searchForChannel = compose(debugSearch, queryPerPage(10), baseSearchURL('channel'));
+var searchForVideos = compose(mockSearch, queryPerPage(10), baseSearchURL('video'));
+var searchForChannel = compose(mockSearch, queryPerPage(10), baseSearchURL('channel'));
 
 export {searchForVideos, searchForChannel};
