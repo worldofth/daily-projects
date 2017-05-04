@@ -4,21 +4,27 @@ import {log, map} from './util';
 import reduce from 'ramda/src/reduce';
 import curry from 'ramda/src/curry';
 import compose from 'ramda/src/compose';
-import {task} from 'folktale/data/task';
+import {task, of} from 'folktale/data/task';
 
-var getInput = getDom('.js-input').map(domEvent('keyup'));
+// getInput:: String -> EventStream<Task(error, String)>
+var getInput = compose(map(domEvent('keyup')), getDom);
 
-var createResultItem = (html, item) => html + `<li><a href="https://www.youtube.com/embed/${item.videoId}" target="#vidIframe">${item.title}</a></li>`;
+// wrapDom:: String -> String -> String
+var wrapDom = curry((start, end, html) => start + html + end);
 
-var createResultItems = reduce(createResultItem, '');
+// createResultItem:: String -> Obj -> String
+var createResultItem = (html, item) => html + `<li><a href="https://www.youtube.com/embed/${item.videoId}" target="vidIframe">${item.title}</a></li>`;
 
-var innerHtml = curry((dom, html) => dom.innerHTML = html);
+// createResultItems:: String[] -> String
+var createResultItems = compose(wrapDom('<ul>', '</ul>'), reduce(createResultItem, ''));
 
-var getOutput = getDom('.js-output')
+// innerHtml:: [String, Dom] -> Task(error, String)
+var innerHtml = ([html, dom]) => task(resolver => resolver.resolve(dom.innerHTML = html));
+
+var triggerSearchTasks = task => task.map(createResultItems).and(getDom('.js-output')).chain(innerHtml).run().future();
 
 function main(){
-	var triggerSearch = task => task.map(createResultItems).map(log).run().promise();
-	getInput.map(map(seachAndGetVideoItems)).map(map(triggerSearch)).run().future().map((evtStrm) => evtStrm.onValue());
+	getInput('.js-input').map(map(seachAndGetVideoItems)).map(map(triggerSearchTasks)).run().future().map((evtStrm) => evtStrm.onValue());
 }
 
 document.addEventListener('DOMContentLoaded', main);
