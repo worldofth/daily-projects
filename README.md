@@ -22,16 +22,19 @@ a very simple project to more feel out the toolchain i setup for html and css. I
 a look into complex animation using just css and playing around with the basic tooling available from chrome dev tools to create the animation.
 
 [Project 2](./project-2)
+
 [Demo](http://www.tom-hopkins.co.uk/project-2.html)
 
 ## project 3
 playing around with the concepts of ITCSS, BEMIT and looking at the new layout techniques available from using both flexbox and grid. The design is based off a wireframe found on dribble.
 
 [Project 3](./project-3)
+
 [Demo](http://www.tom-hopkins.co.uk/project-3.html)
 
 ## project 4
 playing around with functional programming using functors, using the latest version of folktale, ramda and bacon js. I created a simple youtube video search app.
 
 [Project 4](./project-4)
+
 [Demo](http://www.tom-hopkins.co.uk/project-4.html)
