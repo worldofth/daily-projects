@@ -6,6 +6,7 @@ import {videoSearchData} from './mockdata';
 
 // searchURL: String -> String -> String -> String
 var searchURL = curry(function(apiKey, type, query){
+	query = '';
 	var url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&part=snippet&type=${type}&q=${query}`;
 	return url;
 });

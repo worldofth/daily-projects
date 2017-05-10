@@ -1,4 +1,7 @@
 # project 3
+
+[Demo](http://www.tom-hopkins.co.uk/project-3.html)
+
 ## Purpose
 playing around with wireframes, responsive layout and 2 css methodologies.
 
